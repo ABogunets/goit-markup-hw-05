@@ -552,8 +552,11 @@ address {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     background-color: var(--primary-bkgd-color);
+    transition: background-color var(--duration) var(--timing-function);
 }
-
+.close-button:hover {
+    background-color: var(--accent-text-color);
+}
 /* PORTFOLIO PAGE */
 
 /* buttons */
