@@ -14,7 +14,7 @@
     --icon-color: #AFB1B8;
 
     --duration: 250ms;
-    --modal-duration: 1250ms;
+    --modal-duration: 500ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Global */
@@ -304,6 +304,7 @@ img {
 
     color: var(--primary-bkgd-color);
 
+    font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -448,13 +449,6 @@ address {
     font-style: normal;
     margin-top: 20px;
 }
-/* .address-footer,
-.email-footer,
-.tel-footer {
-    color: var(--contacts-footer-color);
-    font-size: 14px;
-    text-decoration: none;   
-} */
 .footer-link {
     color: var(--contacts-footer-color);
     font-size: 14px;
@@ -510,11 +504,10 @@ address {
     background: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opacity var(--modal-duration) var(--timing-function), visibility 1500ms var(--modal-duration);
+    transition: opacity var(--modal-duration) var(--timing-function);
 }
 .backdrop.is-hidden {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
 }
 .backdrop.is-hidden .modal {
@@ -532,6 +525,7 @@ address {
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    cursor: pointer;
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--modal-duration) var(--timing-function);
@@ -554,8 +548,8 @@ address {
     background-color: var(--primary-bkgd-color);
     transition: background-color var(--duration) var(--timing-function);
 }
-.close-button:hover {
-    background-color: var(--accent-text-color);
+.close-button:hover svg {
+    fill: var(--accent-text-color);
 }
 /* PORTFOLIO PAGE */
 
